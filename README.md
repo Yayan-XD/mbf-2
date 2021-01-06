@@ -30,7 +30,7 @@ $ python2 crack.py
 ```
 
 ## Informasi For Updates Script
-* V1 (Fix Errors Installed)
+* V1 (Dump idnfriend)
 * V2 (Fix Errors Clone Group)
 * V3 (Done All Fix Error)
 * V4 (Fix Login Email)
