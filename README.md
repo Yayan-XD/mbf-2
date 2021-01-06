@@ -1,5 +1,8 @@
 <img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/wallpaperbetter_(1).jpg" width="640" title="Menu" alt="Menu">
 </p>
+ <a href="https://github.com/Yayan-XD/mbf-2">
+    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/mbf-2.svg"/>
+  </a>
 
 <h1 align="center">
   mbf-2
@@ -25,10 +28,7 @@
     <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/mbf-2.svg"/>
   </a>
   <a href="https://github.com/Yayan-XD/mbf-2">
-    <img alt="Search" src="https://img.shields.io/github/search/Yayan-XD/mbf-2.svg"/>
-  </a>
-  <a href="https://github.com/Yayan-XD/mbf-2">
-    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/mbf-2.svg"/>
+    <img alt="Search" src="https://img.shields.io/github/search/Yayan-XD/Craker/mbf-2.svg"/>
   </a>
   <a href="https://github.com/Yayan-XD/mbf-2">
     <img alt="Starts" src="https://img.shields.io/github/stars/Yayan-XD/mbf-2.svg"/>
