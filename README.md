@@ -18,15 +18,14 @@
 ```
 $ pkg update && pkg upgrade
 $ pkg install python2
-$ pip2 install requests
-$ pip2 install mechanize
+$ pip2 install requests bs4
 $ pkg install git
-$ git clone https://github.com/anggaxd/cfbid
+$ git clone https://github.com/Yayan-XD/mbf-2
 ```
 
 ## Run script
 ```
-$ cd cfbid
+$ cd mbf-2
 $ python2 crack.py
 ```
 
