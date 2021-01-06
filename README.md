@@ -12,7 +12,32 @@
  <img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/kontol.png" width="640" title="Menu" alt="Menu">
 </p>
 
-   ![](https://img.shields.io/badge/Language-2-blue) ![](https://img.shields.io/badge/Python-2.7-green) ![](https://img.shields.io/badge/Size-174Kb-orange) ![](https://img.shields.io/badge/Relase-20-08-20-brightgreen)
+<a href="https://github.com/Yayan-XD/followers">
+<img title="Followers" src="https://img.shields.io/github/followers/Yayan-XD?label=Followers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Yayan-XD/termux-style/stargazers/">
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Yayan-XD/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Language" src="https://img.shields.io/github/languages/count/Yayan-XD/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Search" src="https://img.shields.io/github/search/Yayan-XD/Craker/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Starts" src="https://img.shields.io/github/stars/Yayan-XD/Cr4ck.svg"/>
+  </a>
+  <a href="https://github.com/Yayan-XD/Cr4ck">
+    <img alt="Forks" src="https://img.shields.io/github/forks/Yayan-XD/Cr4ck.svg"/>
+  </a>
+</div>
+<p align="center">
 
 ## Install script on Termux
 ```
