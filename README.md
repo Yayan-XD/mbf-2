@@ -25,7 +25,7 @@
     <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/mbf-2.svg"/>
   </a>
   <a href="https://github.com/Yayan-XD/mbf-2">
-    <img alt="Search" src="https://img.shields.io/github/search/Yayan-XD/Craker/mbf-2.svg"/>
+    <img alt="Search" src="https://img.shields.io/github/search/Yayan-XD/mbf-2.svg"/>
   </a>
   <a href="https://github.com/Yayan-XD/mbf-2">
     <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/mbf-2.svg"/>
