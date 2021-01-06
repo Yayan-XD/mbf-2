@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/anggaxd/cfbid/main/20201005_120110.jpg" width="640" title="Menu" alt="Menu">
+<img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/wallpaperbetter_(1).jpg" width="640" title="Menu" alt="Menu">
 </p>
 
 <h1 align="center">
