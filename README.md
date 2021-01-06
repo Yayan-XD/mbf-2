@@ -3,7 +3,8 @@
  <a href="https://github.com/Yayan-XD/mbf-2">
     <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/mbf-2.svg"/>
   </a>
-  <a href="https://github.com/Yayan-XD/mbf-2">
+
+ <a href="https://github.com/Yayan-XD/mbf-2">
     <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/mbf-2.svg"/>
   </a>
 
