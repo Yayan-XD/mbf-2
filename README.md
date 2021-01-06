@@ -30,12 +30,13 @@ $ python2 crack.py
 ```
 
 ## Informasi For Updates Script
-* V1 (Dump Id Friends lists)
-* V2 (Dump Id Friends)
-* V3 (Dump Id by Search name)
-* V4 (Start Crack)
-* V5
-* V6
+* V1 {Dump Id Friends lists}
+* V2 {Dump Id Friends}
+* V3 {Dump Id by Search name}
+* V4 {Start Crack}
+* V5 {Remove cookies}
+* V6 {Update tools}
+
 ##MY SOCIAL MEDIA
 
 [![](https://img.shields.io/badge/Github-red?logo=Github&logoColor=red&labelColor=white)](https://github.com/Yayan-XD)[![](https://img.shields.io/badge/Twitter-blue?logo=Twitter&logoColor=White&labelColor=white)](https://mobile.twitter.com/moch_xd)
