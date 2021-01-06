@@ -2,11 +2,11 @@
 </p>
 
 <h1 align="center">
-  CFBID
+  mbf-2
 </h1>
 </div>
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/anggaxd">Angga Kurniawan</a>
+  Made with ❤️ by <a href="https://github.com/anggaxd">YayanXD_</a>
 </p>
 <p align="center">
  <img src="https://raw.githubusercontent.com/anggaxd/cfbid/main/20201005_120110.jpg" width="640" title="Menu" alt="Menu">
