@@ -13,7 +13,7 @@
 </h1>
 </div>
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/anggaxd">YayanXD_</a>
+  Made with ❤️ by <a href="https://www.facebook.com/KM39453">YayanXD_</a>
 </p>
 <p align="center">
  <img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/kontol.png" width="640" title="Menu" alt="Menu">
