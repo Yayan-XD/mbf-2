@@ -62,6 +62,8 @@ $ python2 crack.py
 * V4 {Start Crack}
 * V5 {Remove cookies}
 * V0 {Update tools}
+* Mutli type login
+*   - Cokies
 
 #### MY SOCIAL MEDIA
 
