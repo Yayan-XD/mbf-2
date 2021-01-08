@@ -1,7 +1,6 @@
 #!usr/bin/python2.7
 # coding=utf-8
 
-import base64
 from bs4 import BeautifulSoup as parser
 
 def main(cookie, url, config):
