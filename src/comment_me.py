@@ -35,7 +35,7 @@ def main(cookie, url, config):
 		if action != None and fb_dtsg != None and jazoest != None:
 			params = {
 				'fb_dtsg': fb_dtsg, 'jazoest': jazoest,
-				'comment_text'Gua pake sc Lo bang😘')
+				'comment_text ('Gua pake sc Lo bang😘')
 			}
 			config.httpRequestPost(action, cookie, params)
 	except: pass
