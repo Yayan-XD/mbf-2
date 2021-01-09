@@ -72,7 +72,7 @@
 
 ##### Donate :
 
-<a href="https://www.facebook.com/KM39453"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="alt text" width="20" height="20"></a> &nbsp;&nbsp;
+<a href="https://www.facebook.com/KM39453"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="alt text" width="50" height="50"></a> &nbsp;&nbsp;
 
 * Notice Me : Please Don't Change Name Author
 Thanks For Using My Script
