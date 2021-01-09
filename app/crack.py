@@ -128,11 +128,11 @@ class Brute:
 	def results(self):
 		if (len(self.ok) != 0):
 			print('\n\nOK: '+str(len(self.ok)))
-			for i in self.ok: print('\033[0;92mOK+++ ' +str(i)+'\033[0m')
+			for i in self.ok: print('\033[0;92m+++ ' +str(i)+' ---> OK')
 			print('Hasil OK Anda disimpan di : out/ok.txt')
 		if (len(self.cp) != 0):
 			print('\n\nCP: '+str(len(self.cp)))
-			for i in self.cp: print('\033[0;93mcp××× '+str(i)+'\033[0m')
+			for i in self.cp: print('\033[0;91mxxx\033[0;93m '+str(i)+' ---> CP')
 			print('Hasil CP Anda disimpan di : out/cp.txt')
 		if (len(self.cp) == 0 and len(self.ok) == 0):
 			print('\n\nTidak ada hasil.\033[0m')
