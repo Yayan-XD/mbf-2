@@ -71,7 +71,8 @@
 [![](https://img.shields.io/badge/Facebook-blue?logo=Facebook&logoColor=blue&labelColor=white)](https://www.facebook.com/KM39453)[![](https://img.shields.io/badge/Instagram-red?logo=Instagram&logoColor=red&labelColor=white)](https://www.instagram.com/yayanxd_/) [![](https://img.shields.io/badge/Whatsapp-CHAT-red?logo=Whatsapp&logoColor=Brightgreen&labelColor=white)](https://wa.me/6285603036683?text=Asalamualaikum+bang)
 
 ##### Donate :
-[![](https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg)]()
+
+<a href="https://www.facebook.com/KM39453"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="alt text" width="20" height="20"></a> &nbsp;&nbsp;
 
 * Notice Me : Please Don't Change Name Author
 Thanks For Using My Script
