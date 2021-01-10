@@ -53,7 +53,7 @@ class Brute:
 						break
 				except: pass
 				sys.stdout.write(
-					'\r[\033[0;91m{}\033[0m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m:\033[0;92m{} \033[0;93mCP \033[0;91m:\033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+					'\r[\033[0;91m{}\033[0m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
 				); sys.stdout.flush()
 		else:
 			self.loop +=1
@@ -65,7 +65,7 @@ class Brute:
 						break
 				except: pass
 				sys.stdout.write(
-					'\r[\033[0;91m{}\033[0m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m:\033[0;92m{} \033[0;93mCP \033[0;91m:\033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+					'\r[\033[0;91m{}\033[0m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
 				); sys.stdout.flush()
 
 	def main(self):
