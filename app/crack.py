@@ -53,7 +53,7 @@ class Brute:
 						break
 				except: pass
 				sys.stdout.write(
-					'\r[\033[0;91m{}\033[0m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+					'\r\033[0;95m[\033[0;97m{}\033[0;95m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
 				); sys.stdout.flush()
 		else:
 			self.loop +=1
@@ -65,7 +65,7 @@ class Brute:
 						break
 				except: pass
 				sys.stdout.write(
-					'\r\033[0;96m[\033[0;97m{}\033[0;96m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
+					'\r\033[0;95m[\033[0;97m{}\033[0;95m] \033[0;96mCrack \033[0;97m{}/{} \033[0;92mOK \033[0;91m: \033[0;92m{} \033[0;93mCP \033[0;91m: \033[0;93m{} '.format(datetime.now().strftime('%H:%M:%S'), self.loop, len(self.target), len(self.ok), len(self.cp))
 				); sys.stdout.flush()
 
 	def main(self):
@@ -127,11 +127,11 @@ class Brute:
 
 	def results(self):
 		if (len(self.ok) != 0):
-			print('\n\nOK: '+str(len(self.ok)))
+			print('\n\nOK : '+str(len(self.ok)))
 			for i in self.ok: print('\033[0;92m++ ' +str(i)+' ----> OK')
 			print('Hasil OK Anda disimpan di : out/ok.txt')
 		if (len(self.cp) != 0):
-			print('\n\nCP: '+str(len(self.cp)))
+			print('\n\nCP : '+str(len(self.cp)))
 			for i in self.cp: print('\033[0;91m++\033[0;93m '+str(i)+' ----> CP')
 			print('Hasil CP Anda disimpan di : out/cp.txt')
 		if (len(self.cp) == 0 and len(self.ok) == 0):
