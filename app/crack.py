@@ -70,7 +70,7 @@ class Brute:
 
 	def main(self):
 		while True:
-			file = raw_input('\n\033[0;91m{\033[0;97mWARNING\033[0;91m} \033[0;92msebelum mulai crack, anda di haruskan nge dump id terlebih dahulu...\n\n\033[0;94mMasukan hasil dump tadi \033[0;97m{\033[0;92mcontoh\033[0;91m: \033[0;92mdump/xxx.json\033[0;97m} \033[0;91m:\033[0;96m ')
+			file = raw_input('\n\033[0;91m{\033[0;97mWARNING\033[0;91m} \033[0;92mSebelum Memulai Crack.\nAnda Di Haruskan Nge Dump Id Terlebih Dahulu..\n\n\033[0;94mMasukan hasil dump tadi \033[0;97m{\033[0;92mcontoh\033[0;91m: \033[0;92mdump/xxx.json\033[0;97m} \033[0;91m:\033[0;96m ')
 			try:
 				list = open(file, 'r').read()
 				object = json.loads(list)
