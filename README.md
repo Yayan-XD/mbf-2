@@ -59,10 +59,11 @@
 * V1 {Dump Id Friends lists}
 * V2 {Dump Id Friends}
 * V3 {Dump Id by Search name}
-* V4 {Start Crack}
-* V5 {Remove cookies}
+* V4 {Dump Id like status}
+* V5 {Start crack}
+* V6 {Remove cookies}
 * V0 {Update tools}
-* Mutli type login
+*  Mutli type login
 *   - Cokies
 
 #### MY SOCIAL MEDIA
