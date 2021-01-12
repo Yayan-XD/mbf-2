@@ -128,7 +128,7 @@ class Brute:
 	def results(self):
 		if (len(self.ok) != 0):
 			print('\n\nOK \033[0;97m:\033[0;94m '+str(len(self.ok)))
-			for i in self.ok: print('\033[0;92m++ ' +str(i)+' ----> OK')
+			for i in self.ok: print('\033[0;97m++\033[0;92m ' +str(i)+' ----> OK')
 			print('Hasil OK Anda disimpan di : out/ok.txt')
 		if (len(self.cp) != 0):
 			print('\n\nCP\033[0;97m:\033[0;94m '+str(len(self.cp)))
