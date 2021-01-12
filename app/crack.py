@@ -106,7 +106,7 @@ class Brute:
 					]
 				else:
 					listpass = [
-						'sayang', 'doraemon',
+						'sayang', 'anjing',
 						'bangsat', 'kontol'
 					]
 				self.target.append({'id': user['uid'], 'pw': listpass})
@@ -116,7 +116,7 @@ class Brute:
 		ask = raw_input('\033[0;93mGunakan kata sandi Defatuls atau Manual? \033[0;91m{\033[0;92md\033[0;97m/\033[0;96mm\033[0;91m} \033[0;93m:\033[0;91m\033[0m ')
 		if ask.lower() == 'm':
 			while True:
-				print('\n\033[0;97mMasukan kata sandi yang tertera disini \033[0;91m: \033[0;92msayang,doraemon,bangsat,kontol\n\033[0m')
+				print('\n\033[0;97mMasukan kata sandi yang tertera disini \033[0;91m: \033[0;92msayang,anjing,bangsat,kontol\n\033[0m')
 				self.setpw = raw_input('\033[0;94mMasukan password \033[0;91m:\033[0;92m ').strip().split(',')
 				if self.setpw[0] != '':
 					break
