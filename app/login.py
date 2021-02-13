@@ -36,7 +36,7 @@ class Brute(object):
 			self.main(response)
 		else:
 			os.remove('log/cookies.log')
-			print('\n\033[0;91m[WARNING] Cookies Salah!')
+			print('\n\033[0;91mCokiies Fb Salah!')
 			raw_input('\n[ Press Enter]')
 			login.loginFb(self, self.url, self.config)
 			self.cookie = self.config.loadCookie()
