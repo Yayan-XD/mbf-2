@@ -62,9 +62,10 @@
 * V4 {Dump Id like status}
 * V5 {Start crack}
 * V6 {Remove cookies}
-* V0 {Update tools}
+* V07 {Update Tools}
+* V0 {Exit}
 *  Mutli type login
-*   - Cokies
+*   - [Cokies](https://youtu.be/72zvkSbVPOI)
 
 #### MY SOCIAL MEDIA
 
