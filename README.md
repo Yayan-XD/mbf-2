@@ -42,17 +42,17 @@
 
 ## Install script on Termux
 ```python
-> pkg update && pkg upgrade
-> pkg install python2
-> pip2 install requests bs4
-> pkg install git
-> git clone https://github.com/Yayan-XD/mbf-2
+$ pkg update && pkg upgrade
+$ pkg install python2
+$ pip2 install requests bs4
+$ pkg install git
+$ git clone https://github.com/Yayan-XD/mbf-2
 ```
 
 ## Run script
 ```python
-> cd mbf-2
-> python2 crack.py
+$ cd mbf-2
+$ python2 crack.py
 ```
 
 ## Informasi For Updates Script
