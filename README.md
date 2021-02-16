@@ -41,7 +41,7 @@
 <p align="center">
 
 ## Install script on Termux
-```bash
+```python
 > pkg update && pkg upgrade
 > pkg install python2
 > pip2 install requests bs4
@@ -50,7 +50,7 @@
 ```
 
 ## Run script
-```bash
+```python
 > cd mbf-2
 > python2 crack.py
 ```
