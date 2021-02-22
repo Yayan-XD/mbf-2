@@ -16,7 +16,7 @@
   Made with ❤️ by <a href="https://www.facebook.com/KM39453">YayanXD_</a>
 </p>
 <p align="center">
- <img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/Screenshot_20210213_154911.jpg" width="640" title="Menu" alt="Menu">
+ <img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/IMG_20210222_124322.jpg" width="640" title="Menu" alt="Menu">
 </p>
 
 <a href="https://github.com/Yayan-XD/followers">
