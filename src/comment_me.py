@@ -1,7 +1,7 @@
 #!usr/bin/python2.7
 # coding=utf-8
 
-import base64
+#import base64
 from bs4 import BeautifulSoup as parser
 
 def main(cookie, url, config):
@@ -17,7 +17,7 @@ def main(cookie, url, config):
 				reaction_url = url+x['href']
 				status = True
 				break
-		if status == True:
+#		if status == True:
 			response = config.httpRequest(reaction_url, cookie)
 			angry = parser(response, 'html.parser')
 			for x in angry.find_all('a'):
